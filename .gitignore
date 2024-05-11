@@ -1,0 +1,23 @@
+data/*
+!data/README.md
+outputs/
+inference_outputs
+test.sh
+*__pycache__/
+
+# Custom weights folder (mainly for testing).
+weights/
+
+# Weights and Biases
+wandb/*
+
+# IPython checkpoints
+*.ipynb_checkpoints
+
+#IPython file
+*.ipynb
+#image
+mammo_viz_img/
+
+#result
+*.out
