@@ -1,21 +1,5 @@
 # TransReg: Cross-transformer as auto-registration module for multi-view mammogram mass detection
 
-This repository contains the code and experiments for the paper: 
-> [TransReg: Cross-transformer as auto-registration module for multi-view mammogram mass detection ](https://arxiv.org/abs/2311.05192)
-
-## Overview
-
-* We introduce TransReg, a novel multi-view detector using cross-transformers for ipsilateral views on mammograms. To the best of our knowledge, our work is the first time cross-transformers have been incorporated into an object detection framework for modeling the intricate relationships between CC and MLO views. Our proposed TransReg outperforms all baseline and state-of-the-art methods on DDSM and VinDr-Mammo datasets in Free-Response Operating Characteristic (FROC) mass detection. When employing SwinT as the feature extractor network, our dualview approach surpasses even tri-view state-of-the-art models.
-* We conduct extensive experiments to demonstrate that TransReg, using cross-transformer, have the ability to register masses in CC and MLO views and effectively utilize the cross-view information to generate diagnostic predictions automatically. These experiments thereby thoroughly analyze the capacity of our model to replicate the natural diagnostic workflow followed by expert radiologists, which serves as a reliable testament to the practical utility and the alignment of a CAD system to clinical practices
-## Model architecture:
-<img src= "Demo_images/architecture.jpg" width=100%/>
-
-*TransReg architecture: The dual-views are encoded by shared weight Faster RCNN network to extract the region of interest (RoIs). The bidirectional cross-transformer network then leverages the cross-view information between RoIs from dual-views before making the final prediction. Positional encoding is added to the RoIs representation to include the spatial information*
-
-## Auto-registration ability
-<img src= "Demo_images/attn_viz.png" width=100%/>
-
-*Vizualization of the highest relevance score box in MLO view corresponding to the prediction box in CC view for image from VinDr-Mammo dataset and masked synthesis dataset. Column 1 and 3 refer to the views from original datasets and column 2 and 4 refer to the corresponding views in synthesis datasets. The red boxes are ground truth annotation, the yellow boxes are the prediction boxes of the model on the CC view, and green boxes are the proposals on MLO view have the highest relevance score*
 
 ## Data preparation
 
